@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "recommender.css" %>
+<h1>SOC by SHOE</h1>
+
+Shades of Circuits by Sharon and Zoe</p>
+
+<div class = "container">
+<%= form_tag '/recommend_me', method: 'POST' do %>
+    How much time do you have?
+  </br>
+  <p class = "p1">
+    <select name="time">
+      <option value="">- Select time (minutes) -</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="40">40</option>
+      <option value="50">50</option>
+      <option value="60">60</option>
+    </select>
+  </p>
+    </br>
+  What parts of your body do you want to tone?
+</br>
+    <p class = "p2">
+    <input type="checkbox" name="body_part[]" value="upper_body">Upper Body</input>
+      </br>
+    <input type="checkbox" name="body_part[]" value="lower_body">Lower Body</input>
+      </br>
+    <input type="checkbox" name="body_part[]" value="core">Core</input>
+      </br>
+    </p>
+    <p class = "p3">
+    <input  type="submit"></input>
+  </p>
+
+    <% end %>
+</div>

@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag "recommender.css" %>
+
+
+<h1>Your circuit</h1>
+<%= '"'+ @quote.quotation + '"' %>
+
+<div class = "container">
+  <% @instructions.flatten.each do |x| %>
+    <%= x.html_safe %>
+    </br>
+  <% end %>
+  </br> </br>
+  Timer:
+  <%= react_component('Timer', times: @recommendations.map do |a|
+                                          @work_time
+                                        end,
+  exercises: @recommendations.map do |exercise|
+                exercise.name
+              end) %>
+
+  <!-- <p class ="p5">
+    <a href= "/descriptions">Exercise Descriptions</a>
+  </p> -->
+  <p class = "p4">
+    <a href = "/">Back</a>
+  </p>
+</div>
+
+<!-- <div>
+  <span id="time">05:00</span>
+  minutes!
+</div> -->

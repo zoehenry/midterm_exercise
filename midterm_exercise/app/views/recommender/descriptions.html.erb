@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "recommender.css" %>
+
+<h1>Exercise Descriptions</h1>
+
+<div class = "container">
+  <% @descriptions.each do |x| %>
+    <%= x.html_safe %>
+    </br>
+  <% end %>
+  </br> </br>
+  <p class = "p4">
+    <a href = "/recommend_me">Back</a>
+  </p>
+</div>

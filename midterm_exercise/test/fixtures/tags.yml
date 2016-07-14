@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 
+  body_part: MyString
+  exercise_id: 1
+
+two:
+  time: 
+  body_part: MyString
+  exercise_id: 1
