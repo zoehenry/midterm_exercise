@@ -36,11 +36,11 @@ getExerciseTimes: function() {
   var exerciseTimes = [];
   var time;
 
-  for (var i = 0; i < this.props.times.length; i++) {
+  for (var i = 0; i < this.props.exercises.length; i++) {
     if(i === this.state.index) {
       time = this.state.secondsLeft;
     } else if (i > this.state.index) {
-      time = this.props.times[i];
+      time = this.props.times[1];
     } else {
       time = 0;
     }
