@@ -16,7 +16,6 @@ class RecommenderController < ApplicationController
     quotes = Quote.all
     @quote = quotes.shuffle.first
     @instructions = self.megaset(@mega_set)
-
   end
 
   def descriptions

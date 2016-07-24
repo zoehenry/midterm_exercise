@@ -14,9 +14,10 @@
   <%= react_component('Timer', times: @recommendations.map do |a|
                                           @work_time
                                         end,
-  exercises: @recommendations.map do |exercise|
+  exercises: @recommendations.flatten.map do |exercise|
                 exercise.name
-              end) %>
+              end
+            ) %>
 
   <!-- <p class ="p5">
     <a href= "/descriptions">Exercise Descriptions</a>
